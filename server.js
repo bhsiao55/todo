@@ -3,7 +3,7 @@
 	var app      = express();                        // create our app w/ express
 	var mongoose = require('mongoose');              // mongoose for mongodb
 
-	// configuration =================
+    // configuration =================
     mongoose.connect('mongodb://todo:todo@localhost/todo'); 	// connect to mongoDB database on modulus.io
 
 	app.configure(function() {
