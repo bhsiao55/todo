@@ -3,9 +3,9 @@
 	var app      = express();                        // create our app w/ express
 	var mongoose = require('mongoose');              // mongoose for mongodb
 
-    // configuration =================
+  // configuration =================
     
-    mongoose.connect('mongodb://todo:todo@localhost/todo'); 	// connect to mongoDB database on modulus.io
+  mongoose.connect('mongodb://todo:todo@localhost/todo'); 	// connect to mongoDB database on modulus.io
 
 	app.configure(function() {
 		app.use(express.static(__dirname + '/public'));         // set the static files location /public/img will be /img for users
@@ -18,9 +18,9 @@
 	var todoSchema = mongoose.Schema({
         text : String,
         done : Boolean
-    });
+  });
 
-    var Todo = mongoose.model('Todo',todoSchema);
+  var Todo = mongoose.model('Todo',todoSchema);
 
 	// listen (start app with node server.js) ======================================
 	app.listen(3000);
