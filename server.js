@@ -15,9 +15,9 @@
 		//app.use(express.bodyParser());                        // deprecated way to pull html from POST	
 		app.use(express.methodOverride());                      // simulate DELETE and PUT
 	});
-	var todoSchema = mongoose.Schema({
-        text : String,
-        done : Boolean
+  var todoSchema = mongoose.Schema({
+    text : String,
+    done : Boolean
   });
 
   var Todo = mongoose.model('Todo',todoSchema);
