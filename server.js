@@ -7,17 +7,17 @@
     
   mongoose.connect('mongodb://todo:todo@localhost/todo'); 	// connect to mongoDB database on modulus.io
 
-	app.configure(function() {
-		app.use(express.static(__dirname + '/public'));         // set the static files location /public/img will be /img for users
-		app.use(express.logger('dev'));                         // log every request to the console
-		app.use(express.json());                                // pull information from html in POST
-		app.use(express.urlencoded());
-		//app.use(express.bodyParser());                        // deprecated way to pull html from POST	
-		app.use(express.methodOverride());                      // simulate DELETE and PUT
-	});
+  app.configure(function() {
+		  app.use(express.static(__dirname + '/public'));         // set the static files location /public/img will be /img for users
+		  app.use(express.logger('dev'));                         // log every request to the console
+		  app.use(express.json());                                // pull information from html in POST
+		  app.use(express.urlencoded());
+		  //app.use(express.bodyParser());                        // deprecated way to pull html from POST	
+		  app.use(express.methodOverride());                      // simulate DELETE and PUT
+  });
   var todoSchema = mongoose.Schema({
-    text : String,
-    done : Boolean
+      text : String,
+      done : Boolean
   });
 
   var Todo = mongoose.model('Todo',todoSchema);
