@@ -4,6 +4,7 @@
 	var mongoose = require('mongoose');              // mongoose for mongodb
 
     // configuration =================
+    
     mongoose.connect('mongodb://todo:todo@localhost/todo'); 	// connect to mongoDB database on modulus.io
 
 	app.configure(function() {
@@ -18,7 +19,8 @@
         text : String,
         done : Boolean
     });
-	var Todo = mongoose.model('Todo',todoSchema);
+
+    var Todo = mongoose.model('Todo',todoSchema);
 
 	// listen (start app with node server.js) ======================================
 	app.listen(3000);
