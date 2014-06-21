@@ -1,4 +1,4 @@
-	// set up ========================
+// set up ========================
 	var express  = require('express');
 	var app      = express();                        // create our app w/ express
 	var mongoose = require('mongoose');              // mongoose for mongodb
@@ -47,8 +47,8 @@
 			if (err)
 				res.send(err);
 
-			// get and return all the todos after you create another
-			Todo.find(function(err, todos) {
+		// get and return all the todos after you create another
+		Todo.find(function(err, todos) {
 				if (err)
 					res.send(err)
 				res.json(todos);
