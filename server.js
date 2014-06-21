@@ -15,8 +15,8 @@
 		app.use(express.methodOverride());                      // simulate DELETE and PUT
 	});
 	var todoSchema = mongoose.Schema({
-    text : String,
-	done : Boolean
+        text : String,
+        done : Boolean
     });
 	var Todo = mongoose.model('Todo',todoSchema);
 
